@@ -11,6 +11,9 @@
       "512": "images/android-chrome-512x512.png"
     },
     "offline_enabled": true,
+    "side_panel": {
+      "default_path": "sidepanel.html"
+    },
     "permissions": ["storage", "activeTab", "contextMenus", "scripting", "sidePanel"],
     "background": {
       "service_worker": "background.js"
