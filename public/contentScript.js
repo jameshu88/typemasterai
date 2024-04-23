@@ -6,9 +6,11 @@ document.addEventListener('mouseup', function (e) {
     // Check if any text is selected
     if (selectedText.length > 0) {
         console.log("[Content] selectedText: " + selectedText);
+        let characterCount = selectedText.length;
+        let characterWithoutSpaceCount = selectedText.replace(/\s/g, "").length;
+
         // Split selected string based on the following delimiters.
-        let rawElements = str.split(new RegExp(' [/.,;\n]', 'g'));
-        let wordCount = rawElements.length;
+        let wordCount = selectedText.split(new RegExp(' [/.,;\n]', 'g')).length;
         // TODO: add functionality here to create side panel and signal GPT response.
     }
   });
