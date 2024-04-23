@@ -26,5 +26,11 @@
     },
     "action": {
       "default_popup": "index.html"
-    }
-  }
+    },
+    "web_accessible_resources": [
+      {
+          "resources": ["sidePanelScript.js"],
+          "matches": ["<all_urls>"]
+      }
+  ]
+}
