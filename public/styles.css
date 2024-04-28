@@ -1,0 +1,75 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #524df1; /* Light purple background */
+    margin: 0;
+    padding: 0;
+}
+
+.side-panel {
+    width: auto; /* Automatically adjust width based on content */
+    min-height: 100vh; /* Minimum height to fill viewport */
+    max-height: 100%; /* Maximum height based on content */
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.header h1 {
+    font-size: 42px; /* Larger header font size */
+    margin-bottom: 20px;
+    color: #6256ec; /* Purple header color */
+    text-align: center; /* Center align header */
+}
+
+.metrics {
+    margin-bottom: 30px; /* Increased margin between sections */
+}
+
+.metric {
+    margin-bottom: 20px; /* Increased margin between metrics */
+}
+
+.label {
+    font-weight: bold;
+    color: #6256ec; /* Purple label color */
+}
+
+span {
+    font-size: 20px; /* Metrics value font size */
+    color: #777777; /* Gray metric value color */
+}
+
+.writing-feedback {
+    margin-top: auto; /* Push feedback section to the bottom */
+}
+
+.feedback-text {
+    font-size: 18px; /* Feedback text font size */
+    color: #666666; /* Dark gray feedback text color */
+    text-align: center; /* Center align feedback text */
+}
+
+button {
+    padding: 16px 32px;
+    background-color: #8a75f7; /* Lighter purple button background */
+    color: #ffffff; /* White button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: #6b52e4; /* Darker purple on hover */
+}
+

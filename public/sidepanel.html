@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Word Count</title>
-</head>
-<body>
-    <h1>Word Count</h1>
-    <p id="wordCountDisplay">Select text to see the word count here.</p>
 
-    <script src="sidePanelScript.js"></script>
-</body>
-</html>
 
 <!-- 
 <!DOCTYPE html>
@@ -23,3 +12,42 @@
   </body>
 </html>
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster Metrics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="side-panel">
+        <div class="header">
+            <h1>TypeMaster</h1>
+        </div>
+        <div class="metrics">
+            <h2>Metrics</h2>
+            <div class="metric">
+                <label>Word Count:</label>
+                <span id="wordCountDisplay">0</span>
+            </div>
+            <div class="metric">
+                <label>Character Count (with spaces):</label>
+                <span id="charCountDisplay">0</span>
+            </div>
+            <div class="metric">
+                <label>Character Count (without spaces):</label>
+                <span id="charCountNoSpaceDisplay">0</span>
+            </div>
+        </div>
+        <div class="writing-feedback">
+            <h2>Writing Feedback</h2>
+            <p class="feedback-text">Ask TypeMaster AI for professional writing advice!</p>
+            <button>Ask Now</button>
+        </div>
+    </div>
+    <script src="sidePanelScript.js"></script>
+</body>
+</html>
+
