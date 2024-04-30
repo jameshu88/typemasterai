@@ -1,36 +1,48 @@
 // Opens the side panel when the extension icon is clicked
-chrome.sidePanel
-    .setPanelBehavior({ openPanelOnActionClick: true })
-    .catch((error) => console.error(error));
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
-      id: 'openSidePanel',
-      title: 'Open side panel',
-      contexts: ['selection']
+    id: 'openSidePanel',
+    title: 'Open side panel',
+    contexts: ['selection']
   });
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
+  console.log("Context menu clicked");
   if (info.menuItemId === 'openSidePanel') {
-      chrome.scripting.executeScript({
-          target: {tabId: tab.id},
+    chrome.windows.getCurrent({populate: false}, function(window) {
+      chrome.sidePanel.open({
+        windowId: window.id
+      }).then(() => {
+        console.log('Side panel opened successfully.');
+        chrome.scripting.executeScript({
+          target: { tabId: tab.id },
           function: getSelectedText
+        }, (results) => {
+          if (chrome.runtime.lastError) {
+            console.error('Script execution failed:', chrome.runtime.lastError.message);
+            return;
+          }
+          if (results && results.length > 0) {
+            const selectedText = results[0].result;
+            console.log('Selected text:', selectedText);
+            chrome.runtime.sendMessage({type: 'sendText', text: selectedText});
+          }
+        });
+      }).catch(error => {
+        console.error('Failed to open side panel:', error);
       });
+    });
   }
 });
 
+
+
 function getSelectedText() {
-  chrome.tabs.executeScript({
-      code: 'window.getSelection().toString();'
-  }, function(selection) {
-      chrome.sidePanel.open({
-          windowId: chrome.windows.WINDOW_ID_CURRENT
-      }, () => {
-          chrome.runtime.sendMessage({type: 'sendText', text: selection[0]});
-      });
-  });
+  return window.getSelection().toString();
 }
+
 
 
 //Commented GPT Stuff
