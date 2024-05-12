@@ -1,75 +1,112 @@
+/* Updated CSS */
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #524df1; /* Light purple background */
+    background-color: #fcefee; /* Soft pink background */
     margin: 0;
     padding: 0;
 }
 
 .side-panel {
-    width: auto; /* Automatically adjust width based on content */
-    min-height: 100vh; /* Minimum height to fill viewport */
-    max-height: 100%; /* Maximum height based on content */
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark text color */
+    width: auto;
+    min-height: 100vh;
+    max-height: 100%;
+    background-color: #fff5e1; /* Light peach background */
+    color: #333333;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-x: hidden; /* Hide horizontal overflow */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
+    border-radius: 20px; /* Rounder corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 30px;
+}
+
+.header img {
+    width: 100px; /* Adjust the width of the image (larger size) */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between the image and the title */
 }
 
 .header h1 {
-    font-size: 42px; /* Larger header font size */
-    margin-bottom: 20px;
-    color: #6256ec; /* Purple header color */
-    text-align: center; /* Center align header */
+    font-size: 40px;
+    color: #ff7e67; /* Coral header color */
+    text-align: center;
+    margin: 0; /* Remove default margin */
 }
 
 .metrics {
-    margin-bottom: 30px; /* Increased margin between sections */
+    margin-bottom: 40px;
 }
 
 .metric {
-    margin-bottom: 20px; /* Increased margin between metrics */
+    margin-bottom: 30px;
 }
 
 .label {
     font-weight: bold;
-    color: #6256ec; /* Purple label color */
+    color: #ff7e67; /* Coral label color */
 }
 
 span {
-    font-size: 20px; /* Metrics value font size */
-    color: #777777; /* Gray metric value color */
+    font-size: 24px;
+    color: #7ea3cc; /* Soft blue metric value color */
 }
 
 .writing-feedback {
-    margin-top: auto; /* Push feedback section to the bottom */
+    margin-top: auto;
 }
 
 .feedback-text {
-    font-size: 18px; /* Feedback text font size */
-    color: #666666; /* Dark gray feedback text color */
-    text-align: center; /* Center align feedback text */
+    font-size: 20px;
+    color: #888888; /* Gray feedback text color */
+    text-align: center;
 }
 
 button {
-    padding: 16px 32px;
-    background-color: #8a75f7; /* Lighter purple button background */
-    color: #ffffff; /* White button text color */
+    padding: 18px 36px;
+    background-color: #ffcc70; /* Soft yellow button background */
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Rounded button shape */
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    width: 100%; /* Full width button */
+    width: 100%;
 }
 
 button:hover {
-    background-color: #6b52e4; /* Darker purple on hover */
+    background-color: #ffa94d; /* Brighter yellow on hover */
 }
 
+/* Custom decorative shapes */
+.side-panel::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff7e67; /* Coral color */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.side-panel::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #7ea3cc; /* Soft blue color */
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
