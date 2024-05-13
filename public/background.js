@@ -1,16 +1,12 @@
 // Require setup.html open upon install
-
 chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.get(['apiKey'], function(result) {
-      if (!result.apiKey) {
-          chrome.tabs.create({url: 'setup.html'}); // Open the setup page
-      }
+    if (!result.apiKey) {
+      chrome.tabs.create({ url: 'setup.html' }); // Open the setup page if apiKey is not set
+    }
   });
-});
 
-// Opens the side panel when the extension icon is clicked
-
-chrome.runtime.onInstalled.addListener(() => {
+  // Create context menu item to open the side panel
   chrome.contextMenus.create({
     id: 'openSidePanel',
     title: 'Open side panel',
@@ -18,13 +14,11 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+// Handle context menu click
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-  console.log("Context menu clicked");
   if (info.menuItemId === 'openSidePanel') {
-    chrome.windows.getCurrent({populate: false}, function(window) {
-      chrome.sidePanel.open({
-        windowId: window.id
-      }).then(() => {
+    chrome.sidePanel.open({ windowId: tab.windowId })
+      .then(() => {
         console.log('Side panel opened successfully.');
         chrome.scripting.executeScript({
           target: { tabId: tab.id },
@@ -33,22 +27,22 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
           if (chrome.runtime.lastError) {
             console.error('Script execution failed:', chrome.runtime.lastError.message);
             return;
-          }
+          } 
           if (results && results.length > 0) {
             const selectedText = results[0].result;
             console.log('Selected text:', selectedText);
-            chrome.runtime.sendMessage({type: 'sendText', text: selectedText});
+            chrome.storage.local.set({initialData: selectedText});
+            chrome.runtime.sendMessage({ type: 'sendText', text: selectedText });
           }
         });
-      }).catch(error => {
+      })
+      .catch(error => {
         console.error('Failed to open side panel:', error);
       });
-    });
   }
 });
 
-
-
+// Function to get selected text
 function getSelectedText() {
   return window.getSelection().toString();
 }

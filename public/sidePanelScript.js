@@ -1,3 +1,16 @@
+chrome.storage.local.get(['initialData'], function(result) {
+    var initialData = result.initialData;
+    console.log(initialData);
+        const wordCount = initialData.split(/\s+/).filter(Boolean).length;
+        console.log(wordCount);
+        document.getElementById('wordCountDisplay').textContent = `${wordCount}`;
+        const charCount = initialData.length;
+        document.getElementById('charCountDisplay').textContent = `${charCount}`;
+        const charCountNoSpace = initialData.replace(/\s/g, "").length;
+        document.getElementById('charCountNoSpaceDisplay').textContent = `${charCountNoSpace}`;
+    
+  });
+
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.type === 'sendText') {
         const wordCount = request.text.split(/\s+/).filter(Boolean).length;

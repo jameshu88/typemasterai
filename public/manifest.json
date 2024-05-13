@@ -19,7 +19,8 @@
       "activeTab",
       "contextMenus",
       "scripting",
-      "sidePanel"
+      "sidePanel",
+      "runtime"
   ],
     "background": {
       "service_worker": "background.js"
