@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Setup Your TypeMaster</title>
+    <link rel="stylesheet" href="setup_styles.css"> <!-- Linking to external stylesheet -->
 </head>
 <body>
-    <h1>Enter your OpenAI API Key</h1>
-    <input type="text" id="apiKey" placeholder="Enter API Key Here">
-    <button id="saveButton">Save</button>
-
-    <script src="setup.js"></script> <!-- External script -->
+    <div class="setup-container">
+        <img src="images/TypeMaster Transparent Background.png" alt="TypeMaster Logo" class="logo">
+        <h1>Enter your OpenAI API Key</h1>
+        <input type="text" id="apiKey" placeholder="Enter API Key Here" class="api-input">
+        <button id="saveButton" class="save-btn">Save</button>
+    </div>
+    <script src="setup.js"></script>
 </body>
 </html>
