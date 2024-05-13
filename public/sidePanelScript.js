@@ -9,6 +9,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     }
 });
 
+//OpenAI functionality
+
 document.querySelector('button').addEventListener('click', function() {
     const selectedText = document.getElementById('wordCountDisplay').textContent; // Assuming text is stored here
     if (selectedText) {
@@ -16,19 +18,17 @@ document.querySelector('button').addEventListener('click', function() {
     }
 });
 
-//OpenAI functionality
-
 function sendTextToOpenAI(text) {
     chrome.storage.sync.get(['apiKey'], function(result) {
         if (result.apiKey) {
             const apiKey = result.apiKey;
             const data = {
-                model: "text-davinci-003", // Specify the model here
+                model: "gpt-3.5-turbo", // Specify the model here
                 prompt: `Rewrite the following to sound more professional: ${text}`,
                 max_tokens: 150
             };
             console.log('API KEY', apiKey);
-            fetch('https://api.openai.com/v1/completions', {
+            fetch('https://api.openai.com/v1/chat/completions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
