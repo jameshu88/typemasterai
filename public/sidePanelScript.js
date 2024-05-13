@@ -8,3 +8,44 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         document.getElementById('charCountNoSpaceDisplay').textContent = `${charCountNoSpace}`;
     }
 });
+
+document.querySelector('button').addEventListener('click', function() {
+    const selectedText = document.getElementById('wordCountDisplay').textContent; // Assuming text is stored here
+    if (selectedText) {
+        sendTextToOpenAI(selectedText);
+    }
+});
+
+//OpenAI functionality
+
+function sendTextToOpenAI(text) {
+    chrome.storage.sync.get(['apiKey'], function(result) {
+        if (result.apiKey) {
+            const apiKey = result.apiKey;
+            const data = {
+                model: "text-davinci-003", // Specify the model here
+                prompt: `Rewrite the following to sound more professional: ${text}`,
+                max_tokens: 150
+            };
+            console.log('API KEY', apiKey);
+            fetch('https://api.openai.com/v1/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.choices && data.choices.length > 0) {
+                    const feedbackText = data.choices[0].text;
+                    document.querySelector('.feedback-text').textContent = feedbackText;
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        } else {
+            alert('API key is not set. Please configure your API key first.');
+        }
+    });
+}

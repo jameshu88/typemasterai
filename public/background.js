@@ -1,3 +1,13 @@
+// Require setup.html open upon install
+
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.storage.sync.get(['apiKey'], function(result) {
+      if (!result.apiKey) {
+          chrome.tabs.create({url: 'setup.html'}); // Open the setup page
+      }
+  });
+});
+
 // Opens the side panel when the extension icon is clicked
 
 chrome.runtime.onInstalled.addListener(() => {

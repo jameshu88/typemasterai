@@ -8,7 +8,7 @@ document.addEventListener('mouseup', function (e) {
     }
 });
 
-// Commented GPT Stuff
+// Commented-out GPT Stuff
 /* // This function is called when the user releases the mouse button (mouseup event)
 document.addEventListener('mouseup', function (e) {
     // Get the selected text and remove any leading/trailing whitespace
