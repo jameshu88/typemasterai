@@ -40,7 +40,7 @@ To get started with TypeMaster, you need to set up your API key for OpenAI, whic
 
 ## Extension in Action
 
-Once you have TypeMaster set up, using it is as simple as highlighting text on any web page. Just select the text you've written and click on the TypeMaster icon to open the side panel. Here, you'll see:
+Once you have TypeMaster set up, using it is as simple as highlighting text on any web page. Just select the text you've written and click on the TypeMaster icon to open the side panel. You can also access TypeMaster by right-clicking on highlighted text and choosing "Open side panel". Here, you'll see:
 
 - **Word Count**: Immediate display of the total words and characters.
 - **Professional Feedback**: Suggestions to improve your writing style and clarity.
