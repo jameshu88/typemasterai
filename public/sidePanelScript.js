@@ -25,10 +25,21 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 //OpenAI functionality
 
 document.querySelector('button').addEventListener('click', function() {
-    const selectedText = document.getElementById('wordCountDisplay').textContent; // Assuming text is stored here
-    if (selectedText) {
-        sendTextToOpenAI(selectedText);
-    }
+    // const selectedText = ////;
+    // if (selectedText) {
+    //     sendTextToOpenAI(selectedText);
+    // }
+
+    chrome.storage.local.get(['initialData'], function(result) {
+        var selectedText = result.initialData;
+
+        // Ensure there's text retrieved before sending it to OpenAI
+        if (selectedText) {
+            sendTextToOpenAI(selectedText);
+        } else {
+            console.log("No text was selected or stored.");
+        }
+    });
 });
 
 function sendTextToOpenAI(text) {
@@ -37,7 +48,10 @@ function sendTextToOpenAI(text) {
             const apiKey = result.apiKey;
             const data = {
                 model: "gpt-3.5-turbo", // Specify the model here
-                prompt: `Rewrite the following to sound more professional: ${text}`,
+                messages: [{ // This should be an array of message objects
+                    "role": "user",
+                    "content": `Rewrite the following to sound more professional: ${text}`
+                }],
                 max_tokens: 150
             };
             console.log('API KEY', apiKey);
@@ -52,8 +66,8 @@ function sendTextToOpenAI(text) {
             .then(response => response.json())
             .then(data => {
                 if (data.choices && data.choices.length > 0) {
-                    const feedbackText = data.choices[0].text;
-                    document.querySelector('.feedback-text').textContent = feedbackText;
+                    const feedbackText = data.choices[0].message.content;
+                    document.getElementById('feedbackText').textContent = `${feedbackText}`;
                 }
             })
             .catch(error => console.error('Error:', error));
@@ -62,3 +76,4 @@ function sendTextToOpenAI(text) {
         }
     });
 }
+
