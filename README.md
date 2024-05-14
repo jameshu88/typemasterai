@@ -4,8 +4,6 @@
 
 Welcome to TypeMaster, your ultimate tool for enhancing your writing experience across various platforms! Whether you're drafting emails, completing assignments, or crafting social media posts, it doesn't matter if your website doesn't have word counts, because TypeMaster provides real-time word counting and stylistic feedback to refine your text. Our friendly mascot is here to guide you through your writing journey, making sure every word counts! 
 
-You can read more about our design process in our Medium article [here](https://medium.com/@jamesjinghuang/creating-typemaster-an-llm-powered-chrome-extension-80756878fd71)
-
 ![TypeMaster Mascot](photos/TypeMaster%20Transparent%20Background.png)
 
 ## Features
@@ -52,3 +50,5 @@ Once you have TypeMaster set up, using it is as simple as highlighting text on a
 ## Why TypeMaster?
 
 TypeMaster isn't just another extension; it's your partner in effective communication. It's built to ensure your writing is not only error-free but also impactful and clear. Whether you're a student, a professional, or someone who just loves writing, TypeMaster is designed to help you express yourself better.
+
+You can read more about our design process in our Medium article [here](https://medium.com/@jamesjinghuang/creating-typemaster-an-llm-powered-chrome-extension-80756878fd71)
