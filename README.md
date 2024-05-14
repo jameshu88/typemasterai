@@ -4,7 +4,7 @@
 
 Welcome to TypeMaster, your ultimate tool for enhancing your writing experience across various platforms! Whether you're drafting emails, completing assignments, or crafting social media posts, it doesn't matter if your website doesn't have word counts, because TypeMaster provides real-time word counting and stylistic feedback to refine your text. Our friendly mascot is here to guide you through your writing journey, making sure every word counts!
 
-![TypeMaster Mascot](path/to/mascot_image.png) <!-- TODO: Replace with the path to mascot image -->
+![TypeMaster Mascot](photos/TypeMaster%20Transparent%20Background.png)
 
 ## Features
 
@@ -21,6 +21,9 @@ Follow these simple steps to install TypeMaster on your Chrome browser:
 3. **Enable Developer Mode**: At the top right of the extensions page, toggle the developer mode to enable installation from unpacked archives.
 4. **Load Unpacked Extension**: Click on 'Load unpacked' and select the unzipped folder for TypeMaster from your computer.
 
+
+![Installation Steps](photos/Installation.png)
+
 Now, TypeMaster is ready to assist you with your writing directly in your Chrome browser!
 
 ## Setup
@@ -30,7 +33,7 @@ To get started with TypeMaster, you need to set up your API key for OpenAI, whic
 1. **Open the Extension**: Click on the TypeMaster icon in your browser's extension tray.
 2. **Navigate to Setup**: You will be greeted by a setup page asking for your OpenAI API key.
 
-![Setup Screen](path/to/setup_screenshot.png) <!-- TODO: Replace with the path to setup page screenshot -->
+![Setup Screen](photos/Setup%20Screen.png) <!-- TODO: Replace with the path to setup page screenshot -->
 
 3. **Enter Your OpenAI API Key**: Find your key from your OpenAI account and paste it into the setup field.
 4. **Save and Ready**: Hit save, and you're all set to go!
@@ -42,7 +45,7 @@ Once you have TypeMaster set up, using it is as simple as highlighting text on a
 - **Word Count**: Immediate display of the total words and characters.
 - **Professional Feedback**: Suggestions to improve your writing style and clarity.
 
-![TypeMaster in Action](path/to/action_screenshot.png) <!-- TODO: Replace with the path to action screenshot -->
+![TypeMaster in Action](photos/TypeMaster%20Transparent%20Background.png) <!-- TODO: Replace with the path to action screenshot -->
 
 ## Why TypeMaster?
 
