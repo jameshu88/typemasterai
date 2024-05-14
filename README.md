@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to TypeMaster, your ultimate tool for enhancing your writing experience across various platforms! Whether you're drafting emails, completing assignments, or crafting social media posts, TypeMaster provides real-time word counting and stylistic feedback to refine your text. Our friendly mascot is here to guide you through your writing journey, making sure every word counts!
+Welcome to TypeMaster, your ultimate tool for enhancing your writing experience across various platforms! Whether you're drafting emails, completing assignments, or crafting social media posts, it doesn't matter if your website doesn't have word counts, because TypeMaster provides real-time word counting and stylistic feedback to refine your text. Our friendly mascot is here to guide you through your writing journey, making sure every word counts!
 
 ![TypeMaster Mascot](path/to/mascot_image.png) <!-- TODO: Replace with the path to mascot image -->
 
