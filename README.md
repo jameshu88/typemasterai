@@ -45,7 +45,7 @@ Once you have TypeMaster set up, using it is as simple as highlighting text on a
 - **Word Count**: Immediate display of the total words and characters.
 - **Professional Feedback**: Suggestions to improve your writing style and clarity.
 
-![TypeMaster in Action](photos/TypeMaster%20Transparent%20Background.png) <!-- TODO: Replace with the path to action screenshot -->
+![TypeMaster in Action](In%20Action.png) <!-- TODO: Replace with the path to action screenshot -->
 
 ## Why TypeMaster?
 
