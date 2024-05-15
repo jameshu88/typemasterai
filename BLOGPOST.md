@@ -1,5 +1,7 @@
 # Creating TypeMaster, An LLM-Powered Chrome Extension
 
+A link to this full article can be found on our Medium post [here](https://medium.com/@jamesjinghuang/creating-typemaster-an-llm-powered-chrome-extension-80756878fd71)
+
 ## TypeMaster, our Word-Counting Wizard Mascot
 
 ![TypeMaster Mascot](photos/TypeMaster%20Transparent%20Background.png)
