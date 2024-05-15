@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to TypeMaster, your ultimate tool for enhancing your writing experience across various platforms! Whether you're drafting emails, completing assignments, or crafting social media posts, it doesn't matter if your website doesn't have word counts, because TypeMaster provides real-time word counting and stylistic feedback to refine your text. Our friendly mascot is here to guide you through your writing journey, making sure every word counts! 
+Welcome to TypeMaster, your ultimate tool for enhancing your writing experience across various platforms! Whether you're drafting emails, completing assignments, or crafting social media posts, it doesn't matter if your website doesn't have word counts, because TypeMaster provides real-time word counting and stylistic feedback to refine your text. Our friendly mascot is here to guide you through your writing journey, making sure every word counts! Built with :coffee: by James Huang, Tiffany Lian, Sanya Shetty, and Alec Dempsey.
 
 ![TypeMaster Mascot](photos/TypeMaster%20Transparent%20Background.png)
 
@@ -52,3 +52,9 @@ Once you have TypeMaster set up, using it is as simple as highlighting text on a
 TypeMaster isn't just another extension; it's your partner in effective communication. It's built to ensure your writing is not only error-free but also impactful and clear. Whether you're a student, a professional, or someone who just loves writing, TypeMaster is designed to help you express yourself better.
 
 You can read more about our design process in our Medium article [here](https://medium.com/@jamesjinghuang/creating-typemaster-an-llm-powered-chrome-extension-80756878fd71)
+
+## Feedback and Contributions
+
+We love to hear from our users and encourage everyone to contribute to making TypeMaster even better! If you have feedback, suggestions, or have encountered an issue, please let us know by [filing an issue](https://github.com/jameshu88/typemasterai/issues) in our GitHub repository.
+
+Feel free to report bugs, request features, or suggest improvements. We are committed to fostering a welcoming and constructive community.
